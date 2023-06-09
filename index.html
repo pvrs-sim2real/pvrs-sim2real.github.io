@@ -1,1 +1,56 @@
-Test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>What do we learn from a large-scale study of pre-trained visual representations in sim and real environments?</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 4.5rem;
+            font-family: "Roboto", sans-serif;
+            background-color: #e3f2fd;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .jumbotron {
+            background-color: #ffffff;
+            margin-top: 2rem;
+            padding: 2rem;
+        }
+        .footer {
+            font-size: 0.875rem;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+        <div class="container">
+
+        </div>
+    </nav>
+
+    <main role="main" class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">What do we learn from a large-scale study of pre-trained visual representations in sim and real environments?</h1>
+            <p class="lead">We conduct a large-scale empirical study on the use of pre-trained visual representations (PVRs) -- learned from internet-scale image and video datasets -- to train policies for real-world robotics tasks. Our study spans five different PVRs, two different learning paradigms (imitation and reinforcement learning), and three different robots for manipulation and indoor navigation.</p>
+            <hr class="my-4">
+            <p>Based on our extensive study, we find three major insights. Firstly, performance trends with PVRs in simulation are generally indicative of real-world trends. Secondly, we demonstrate a first-of-its-kind result with indoor ImageNav, by zero-shot transferring a policy trained entirely in simulation to a held-out scene in the real world. We emphasize that this transfer was enabled by the use of PVRs, without which sim2real transfer fails. Finally, we study the impact of three key design decisions when training policies with PVRs: model-size, data augmentation, and fine-tuning. We find data augmentation and fine-tuning to be generally beneficial, while the ideal model-size of PVR depends on the policy learning paradigm.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

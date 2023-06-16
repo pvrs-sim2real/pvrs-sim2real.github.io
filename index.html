@@ -1,56 +1,296 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What do we learn from a large-scale study of pre-trained visual representations in sim and real environments?</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <style>
-        body {
-            padding-top: 4.5rem;
-            font-family: "Roboto", sans-serif;
-            background-color: #e3f2fd;
-        }
-        .navbar-brand {
-            font-weight: bold;
-        }
-        .jumbotron {
-            background-color: #ffffff;
-            margin-top: 2rem;
-            padding: 2rem;
-        }
-        .footer {
-            font-size: 0.875rem;
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #f8f9fa;
-            border-top: 1px solid #e9ecef;
-            margin-top: 2rem;
-        }
-    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/academicons.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./assets/images/favicon.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
-        <div class="container">
 
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">What do we learn from a large-scale study of pre-trained visual representations in sim and real environments?</h1>                    
+                <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                Anonymized
+            </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- TODO PDF Link. -->
+                            <span class="link-block">
+                <a target="_blank" href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+                            <!-- Code Link. -->
+                <span class="link-block">
+                <a target="_blank" href="https://github.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+                <a target="_blank" href="https://github.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-robot"></i>
+                  </span>
+                  <span>Benchmark</span>
+                </a>
+                <a target="_blank" href="https://github.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <main role="main" class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">What do we learn from a large-scale study of pre-trained visual representations in sim and real environments?</h1>
-            <p class="lead">We conduct a large-scale empirical study on the use of pre-trained visual representations (PVRs) -- learned from internet-scale image and video datasets -- to train policies for real-world robotics tasks. Our study spans five different PVRs, two different learning paradigms (imitation and reinforcement learning), and three different robots for manipulation and indoor navigation.</p>
-            <hr class="my-4">
-            <p>Based on our extensive study, we find three major insights. Firstly, performance trends with PVRs in simulation are generally indicative of real-world trends. Secondly, we demonstrate a first-of-its-kind result with indoor ImageNav, by zero-shot transferring a policy trained entirely in simulation to a held-out scene in the real world. We emphasize that this transfer was enabled by the use of PVRs, without which sim2real transfer fails. Finally, we study the impact of three key design decisions when training policies with PVRs: model-size, data augmentation, and fine-tuning. We find data augmentation and fine-tuning to be generally beneficial, while the ideal model-size of PVR depends on the policy learning paradigm.</p>
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column">
+                <img src="assets/images/pvrs_sim2real_teaser.png" class="interpolation-image"
+                alt="" style="display: block; margin-left: auto; margin-right: auto"
+                width="80%">
+                <span style="font-size: 100%">
+                    We conducted 304 experiments with PVRs on five tasks (push cube, pick up bottle, open drawer, reach goal position, and image-goal navigation), 
+                    three robots (Trifinger, Franka, and Stretch), two learning paradigms (imitation and reinforcement learning), in simulation and reality.
+                </span>
+            </div>
         </div>
-    </main>
+    </div>
+</section>
 
-    <footer class="footer">
-        <div class="container">
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p style="font-size: 125%">
+                        We present the largest and most comprehensive empirical study to date on the use of pre-trained visual 
+                        representations (PVRs) -- learned from internet-scale image and video datasets -- for training policies for real-world robotics tasks. 
+                        Our study spans five different PVRs, two different policy-learning paradigms (imitation and reinforcement learning), 
+                        and three different robots for 5 distinct manipulation and indoor navigation tasks. Based on our extensive study, 
+                        we find three major insights. Firstly, performance trends with PVRs in simulation are generally indicative of real-world trends. 
+                        Secondly, we demonstrate a first-of-its-kind result with indoor ImageNav, by zero-shot transferring a policy trained entirely 
+                        in simulation to a held-out scene in the real world. We emphasize that this transfer was enabled by the use of PVRs, 
+                        without which sim2real transfer fails. Finally, we study the impact of three key design decisions when training policies 
+                        with PVRs: model-size, data augmentation, and fine-tuning. We find data augmentation and fine-tuning to be generally 
+                        beneficial, while the ideal model-size of PVR depends on the policy learning paradigm. 
+                    </p>
+                </div>
+                <video id="supplementary"
+                poster=""
+                autoplay
+                controls
+                muted
+                loop
+                height="100%"
+                playbackRate=4.0>
+                <source src="assets/videos/pvrs-sim2real-supplementary-video.mp4"
+                type="video/mp4">
+                </video>                
+            </div>
         </div>
-    </footer>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</section>
+
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3"><span
+                        class="dvc1">Overview</span></h2>        
+
+                        <p style="font-size: 125%">
+                            Pre-trained visual representations (PVRs) show promise in advancing general-purpose visual perception for sensorimotor control. 
+                            However, studies on the efficacy of PVRs have mostly been limited to simulations or small-scale hardware experiments. 
+                            Hence, we pose the research question: <b>Do today's PVRs form a comprehensive visual foundation for a wide variety of robotics tasks?</b> 
+                            In response, we conducted the largest empirical study to date involving 5 PVRs, 3 different robot platforms, 2 policy-learning paradigms, and 5 distinct tasks, totaling 304 experiments and over 100 hours of robot experimentation.
+                        <p style="font-size: 125%">
+                            Our key findings are:
+                        </p>
+                
+                        <ul style="font-size: 125%; padding-left: 5%">
+                            <li>
+                                <b>Sim2Real Predictivity of PVR-based policies:</b>
+                                PVR-based policies demonstrate a sim2real predictivity score of 0.929, indicating a high correlation between performance in simulation and real-world settings, after basic alignment between setups.
+                            </li>
+                            <li>
+                                <b>First of its kind result on ImageNav:</b> An image-goal navigation agent using the strong PVR, VC-1 Large, trained entirely in simulation and achieved a 90% success rate upon zero-shot transfer to real-world application.
+                                This success highlights overcoming the simulation-vs-real domain gap with solely RGB-based perception.
+                            </li>
+                            <li>
+                                <b>Impact of Design Choices:</b> Design choices such as model size, whether to finetune the visual backbone, and the use of data augmentations play a significant role in the performance of PVRs. 
+                                Finetuning and the use of augmentations to be generally beneficial. Regarding model size, smaller models performed better in few-shot imitation learning domains, whereas larger models excelled in extensive RL domains like ImageNav.
+                            </li>
+                        </ul>                                   
+
+
+                        <div class="columns">
+                            <div class="column has-text-centered">
+                                <img src="assets/images/crcc_all_tasks.png" class="interpolation-image"
+                                    alt="" style="display: block; margin-left: auto; margin-right: auto" width="60%"/>
+                            </div>
+                            <div class="column has-text-centered">
+                                <img src="assets/images/srcc_all_tasks.png" class="interpolation-image"
+                                    alt="" style="display: block; margin-left: auto; margin-right: auto" width="60%"/>
+                            </div>
+                        </div>
+                     
+                    <span style="font-size: 110%">
+                    <span style="font-weight: bold">
+                        Comparison of sim2real correlation between success on CortexBench and reality (left) vs. success on our simulation 
+                        environments and reality (right). We find that by matching the simulation setting with real-world conditions (right), 
+                        SRCC (i.e., the Pearson correlation) substantially improves.
+                    </span>
+
+                    <br>
+                    <div class="columns">
+                        <div class="column has-text-centered">
+                            <img src="assets/images/sim_v_real_r3m.png" class="interpolation-image"
+                                alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <img src="assets/images/sim_v_real_clip.png" class="interpolation-image"
+                                alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                        </div>
+                        <div class="column has-text-centered">
+                            <img src="assets/images/sim_v_real_mvp.png" class="interpolation-image"
+                                alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <img src="assets/images/sim_v_real_vc-1_base.png" class="interpolation-image"
+                                alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                        </div> 
+
+                        <div class="column has-text-centered">
+                            <img src="assets/images/sim_v_real_vc-1_large.png" class="interpolation-image"
+                                alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                        </div>                                                                   
+                    </div>
+                    <span style="font-size: 110%">
+                        <span style="font-weight: bold">
+                            Comparison of performance in simulation (blue) vs. reality (red) for five PVRs on five tasks. 
+                            R3M and VC-1 Base performance in sim closely matches 
+                            reality on all tasks. However, for CLIP, MVP, 
+                            and VC-1 Large there is mismatched performance on multiple tasks. 
+                        </span>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Conclusion-->
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3"><span class="dvc1">Conclusion</span></h2>
+                    <div class="content has-text-justified">
+
+                    <p style="font-size: 125%">
+                        Our large-scale empirical study has significantly advanced the understanding of pre-trained visual representations 
+                        (PVRs) in robot learning. We found a high degree of sim2real predictivity of PVR-based policies, suggesting that 
+                        simulation experiments can inform real-world performance. Furthermore, we have achieved a landmark result on ImageNav, 
+                        demonstrating the critical role of PVRs in enabling effective sim2real transfer. Finally, our study highlights the impact 
+                        of key design decisions, such as model size, data augmentation, and fine-tuning when deploying PVRs in real-world robotics 
+                        tasks. These insights help illuminate the immense potential of PVRs for robot learning, setting a strong foundation for 
+                        future research. We will also open-source our code along with the final version of this paper.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-widescreen content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>
+    @inproceedings{pvrs_sim2real,
+        title         = {What do we learn from a large-scale study of pre-trained visual representations in sim and real environments?}, 
+        author        = {},
+        year          = {2023},
+        eprint        = {},
+        archivePrefix = {arXiv},
+        primaryClass  = {cs.CV}
+    }
+        </code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column">
+                <div class="content has-text-centered">
+                    <p>
+                        Website template borrowed from <a
+                            href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a
+                            href="https://github.com/cliport/cliport.github.io">CLIPort</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>

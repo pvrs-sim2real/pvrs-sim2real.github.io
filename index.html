@@ -285,6 +285,7 @@
                         <div class="content has-text-justified">
                             <table class="table is-centered has-text-centered">
                                 <col>
+                                <colgroup span="1"></colgroup>
                                 <colgroup span="2"></colgroup>
                                 <colgroup span="2"></colgroup>
 
@@ -298,7 +299,7 @@
                                     <th colspan="2" scope="colgroup">Stretch</th>
                                 </tr>
                                 <tr>
-                                    <td rowspan="2"></td>
+                                    <td rowspan="1"></td>
                                     <th colspan="2" scope="colgroup">Push-Cube</th>
                                     <th colspan="2" scope="colgroup">Reach-Pos</th>
                                     <th colspan="2" scope="colgroup">Pick-Up</th>
@@ -306,6 +307,7 @@
                                     <th colspan="2" scope="colgroup">ImageNav</th>
                                 </tr>
                                 <tr>
+                                    <th scope="col">Model</th>
                                     <th scope="col">Real</th>
                                     <th scope="col">Sim</th>
                                     <th scope="col">Real</th>
@@ -397,10 +399,119 @@
                                     <td>60</td>
                                 </tr>
                             </table>
-                            <p class="subtitle">
+                            <p class="subtitle has-text-centered">
                                 Zero-shot sim2real evaluations of randomly initialized ViT-Base model
                                 with finetuning & augmentations (row
                                 0) and pre-trained visual encoders (rows 1-5) for all tasks
+                            </p>
+                        </div>
+                        <div class="content has-text-justified">
+                            <table class="table is-centered has-text-centered">
+                                <col>
+                                <colgroup span="2"></colgroup>
+                                <colgroup span="2"></colgroup>
+                                <colgroup span="1"></colgroup>
+
+                                <tr>
+                                    <td rowspan="1"></td>
+                                    <td rowspan="1"></td>
+                                    <td rowspan="1"></td>
+                                    <th class="is-centered has-text-centered" colspan="2" scope="colgroup">Trifinger
+                                    </th>
+                                    <th colspan="2" scope="colgroup">Franka</th>
+                                    <th colspan="2" scope="colgroup">Franka</th>
+                                    <th colspan="2" scope="colgroup">Franka</th>
+                                    <th colspan="2" scope="colgroup">Average</th>
+                                </tr>
+                                <tr>
+                                    <td rowspan="1"></td>
+                                    <td rowspan="1"></td>
+                                    <td rowspan="1"></td>
+                                    <th colspan="2" scope="colgroup">Push-Cube</th>
+                                    <th colspan="2" scope="colgroup">Reach-Pos</th>
+                                    <th colspan="2" scope="colgroup">Pick-Up</th>
+                                    <th colspan="2" scope="colgroup">Open Drawer</th>
+                                    <th colspan="2" scope="colgroup">All tasks</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">Model</th>
+                                    <th scope="col">Frozen</th>
+                                    <th scope="col">Aug</th>
+                                    <th scope="col">Real</th>
+                                    <th scope="col">Sim</th>
+                                    <th scope="col">Real</th>
+                                    <th scope="col">Sim</th>
+                                    <th scope="col">Real</th>
+                                    <th scope="col">Sim</th>
+                                    <th scope="col">Real</th>
+                                    <th scope="col">Sim</th>
+                                    <th scope="col">Real</th>
+                                    <th scope="col">Sim</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">VC1-Base</th>
+                                    <th scope="row">Yes </th>
+                                    <th scope="row">No</th>
+                                    <td>40</td>
+                                    <td>37</td>
+                                    <td>97</td>
+                                    <td>97</td>
+                                    <td>80</td>
+                                    <td>83</td>
+                                    <td>57</td>
+                                    <td>67</td>
+                                    <td>55</td>
+                                    <td>57</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">VC1-Base</th>
+                                    <th scope="row">Yes </th>
+                                    <th scope="row">Yes</th>
+                                    <td>38</td>
+                                    <td>35</td>
+                                    <td>63</td>
+                                    <td>40</td>
+                                    <td>90</td>
+                                    <td>83</td>
+                                    <td>40</td>
+                                    <td>70</td>
+                                    <td>46</td>
+                                    <td>46</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">VC1-Base</th>
+                                    <th scope="row">No</th>
+                                    <th scope="row">No</th>
+                                    <td>36</td>
+                                    <td>20</td>
+                                    <td>89</td>
+                                    <td>0</td>
+                                    <td>93</td>
+                                    <td>0</td>
+                                    <td>40</td>
+                                    <td>33</td>
+                                    <td>61</td>
+                                    <td>60</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">VC1-Base</th>
+                                    <th scope="row">No</th>
+                                    <th scope="row">Yes</th>
+                                    <td>36</td>
+                                    <td>11</td>
+                                    <td>100</td>
+                                    <td>0</td>
+                                    <td>100</td>
+                                    <td>0</td>
+                                    <td>47</td>
+                                    <td>30</td>
+                                    <td>47</td>
+                                    <td>90</td>
+                                </tr>
+                            </table>
+                            <p class="subtitle has-text-centered">
+                                Success rate of policies using two model sizes,
+                                with and without fine-tuning and augmentations on 4 tasks.
                             </p>
                         </div>
                     </div>

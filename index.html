@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="./static/css/academicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
     <link rel="icon" href="./assets/images/favicon.svg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -85,11 +86,20 @@
                                 </span>
                             </div>
                             <span class="link-block">
-                                <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                <a href="https://arxiv.org/pdf/2310.02219.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
                                     <span class="icon">
                                         <i class="ai ai-arxiv" style="font-size: 24px;"></i>
                                     </span>
                                     <span>Arxiv</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="assets/2310.02219.pdf"
+                                    class="external-link button is-normal is-rounded is-dark" target="_blank">
+                                    <span class="icon">
+                                        <i class="fa fa-file-pdf" style="font-size:24px"></i>
+                                    </span>
+                                    <span>Paper</span>
                                 </a>
                             </span>
                         </div>
@@ -401,7 +411,7 @@
                                 </tr>
                             </table>
                             <p class="subtitle has-text-centered">
-                                Zero-shot sim2real evaluations of randomly initialized ViT-Base model
+                                <strong>Table 1: </strong>Zero-shot sim2real evaluations of randomly initialized ViT-Base model
                                 with finetuning & augmentations (row
                                 0) and pre-trained visual encoders (rows 1-5) for all tasks
                             </p>
@@ -573,7 +583,7 @@
                                 </tr>
                             </table>
                             <p class="subtitle has-text-centered">
-                                Success rate of policies using two model sizes,
+                                <strong>Table 2: </strong> Success rate of policies using two model sizes,
                                 with and without fine-tuning and augmentations on 4 tasks.
                             </p>
                         </div>
@@ -744,7 +754,7 @@
                                 </tr>
                             </table>
                             <p class="subtitle has-text-centered">
-                                Sim2Real transfer results. All results are with
+                                <strong>Table 3: </strong>Sim2Real transfer results. All results are with
                                 policies trained in simulation and evaluated on real robots.
                             </p>
                         </div>

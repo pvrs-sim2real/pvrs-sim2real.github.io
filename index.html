@@ -39,6 +39,15 @@
                                     pre-trained visual representations in sim and real environments?" />
 
 </head>
+<script>
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
+</script>
 
 <body style="text-align: justify;">
     <div class="content is-centered has-text-centered">
@@ -86,7 +95,8 @@
                                 </span>
                             </div>
                             <span class="link-block">
-                                <a href="https://arxiv.org/pdf/2310.02219.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                                <a href="https://arxiv.org/pdf/2310.02219.pdf" target="_blank"
+                                    class="external-link button is-normal is-rounded is-dark">
                                     <span class="icon">
                                         <i class="ai ai-arxiv" style="font-size: 24px;"></i>
                                     </span>
@@ -411,7 +421,8 @@
                                 </tr>
                             </table>
                             <p class="subtitle has-text-centered">
-                                <strong>Table 1: </strong>Zero-shot sim2real evaluations of randomly initialized ViT-Base model
+                                <strong>Table 1: </strong>Zero-shot sim2real evaluations of randomly initialized
+                                ViT-Base model
                                 with finetuning & augmentations (row
                                 0) and pre-trained visual encoders (rows 1-5) for all tasks
                             </p>
@@ -817,8 +828,8 @@
                                 <div class="column has-text-centered">
                                     <div class="rows">
                                         <div class="row">
-                                            <video width="3200" height="240"  src="assets/videos/output.mp4" playsinline autoplay loop
-                                                muted ></video>
+                                            <video width="3200" height="240" src="assets/videos/output.mp4" playsinline
+                                                autoplay loop muted></video>
                                         </div>
                                         <div class="row">
                                             Trifinger task
@@ -828,8 +839,8 @@
                                 <div class="column has-text-centered">
                                     <div class="rows is-centered is-vcentered">
                                         <div class="row">
-                                            <video class="px-5" src="assets/videos/0.mp4" playsinline
-                                                autoplay loop muted></video>
+                                            <video class="px-5" src="assets/videos/0.mp4" playsinline autoplay loop
+                                                muted></video>
                                         </div>
                                         <div class="row">
                                             ImageNav
@@ -930,7 +941,20 @@
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
             <h2 class="title has-text-centered">BibTeX</h2>
-            <pre><code>
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <span class="link-block" onclick="copyToClipboard('#p1')">
+                        <!-- <h2>BibTeX</h2> -->
+                        <a href="" class="external-link button is-normal is-rounded is-dark">
+                            <span class="icon">
+                                <i class="fa fa-copy" style="font-size:24px"></i>
+                            </span>
+                            <span>BibTeX (click to copy)</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <pre><code id="p1">
                 @misc{silwal2023learn,
                     title={What do we learn from a large-scale study of pre-trained visual representations in sim and real environments?}, 
                     author={Sneha Silwal and Karmesh Yadav and Tingfan Wu and Jay Vakil and Arjun Majumdar and Sergio Arnaud and Claire Chen and Vincent-Pierre Berges and Dhruv Batra and Aravind Rajeswaran and Mrinal Kalakrishnan and Franziska Meier and Oleksandr Maksymets},
